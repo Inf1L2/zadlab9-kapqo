@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package pl.edu.ur.oopl9;
-
+import java.util.*;
 /**
  *
  * @author maarchyl
@@ -16,6 +16,25 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        int [] losowe;
+        losowe = new int[100];
+        Random rand = new Random();
+        
+        
+        for(int i=0; i<losowe.length; i++){
+         losowe[i] =rand.nextInt(100);   
+         System.out.println(i + " -ty element tablicy wynosi = " + losowe[i]);
+        }
+        
+        Arrays.sort(losowe);
+        
+        System.out.println("Ta sama tablica, lecz posorotwana: ");
+        
+         for(int i=0; i<losowe.length; i++){
+         System.out.println(i + " -ty element tablicy wynosi = " + losowe[i]);
+        }
+        
     }
     
 }
