@@ -17,22 +17,27 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        int [] losowe;
-        losowe = new int[100];
-        Random rand = new Random();
-        
-        
-        for(int i=0; i<losowe.length; i++){
-         losowe[i] =rand.nextInt(100);   
-         System.out.println(i + " -ty element tablicy wynosi = " + losowe[i]);
-        }
-        
-        Arrays.sort(losowe);
-        
-        System.out.println("Ta sama tablica, lecz posorotwana: ");
-        
-         for(int i=0; i<losowe.length; i++){
-         System.out.println(i + " -ty element tablicy wynosi = " + losowe[i]);
+        int n;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Podaj numer zadania: ");
+        n = in.nextInt();
+        switch(n)
+        {
+            case 1: 
+                zad1.zad1();
+                break;
+            case 2: 
+                zad2.zad2();
+                break;
+            case 3: 
+                zad3.zad3();
+                break;
+            case 4: 
+                zad1.zad1();
+                break;
+            default: 
+                System.out.println("Nie ma takiego numeru zadania!");
+                break;
         }
         
     }
